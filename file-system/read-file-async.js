@@ -23,3 +23,20 @@ fs.readFile("./file-system/file2.txt", "utf-8", (err, text) => {
     console.log(text);
 });
 
+
+
+/**
+ * The promisify utility can convert a function that uses callbacks into a function
+ * that uses promises.
+ * 
+ * Use this only for native modules that don't have a promise version.
+ */
+
+const { promisify } = require('node:util');
+const promisifiedReadFile = promisify(fs.readFile);
+
+promisifiedReadFile('./file-system/file.txt', 'utf-8')
+    .then(text => {
+        console.log("=== Promise ===");
+        console.log(text);
+    })
