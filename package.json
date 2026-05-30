@@ -19,9 +19,12 @@
   },
   "license": "ISC",
   "author": "Kevin Hernandez",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "picocolors": "1.1.1"
   }
 }
