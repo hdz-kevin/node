@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import pc from "picocolors";
 
 const directory = process.argv[2] ?? '.';
 
@@ -16,8 +17,8 @@ async function ls(directory) {
             const type = isDirectory ? 'd' : '-';
             const size = stats.size;
             const modified = stats.mtime.toLocaleString();
-            
-            return `${type}\t${size}\t${modified}\t${file}`;
+
+            return `${pc.blue(type)}\t${pc.green(size)}\t${pc.blue(modified)}\t${isDirectory ? pc.blue(file) : pc.yellow(file)}`;
 
         });
 
@@ -25,7 +26,7 @@ async function ls(directory) {
         filesInfo.forEach(info => console.log(info));
         
     } catch {
-        console.log(`Error: no such file or directory "${directory}"`);
+        console.log(pc.redBright(`Error: no such file or directory "${directory}"`));
         process.exit(1);
     }
 }
