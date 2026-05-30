@@ -1,0 +1,27 @@
+{
+  "name": "learning-node",
+  "version": "1.0.0",
+  "description": "learning node to make backend applications",
+  "keywords": [
+    "learning",
+    "node",
+    "backend",
+    "node",
+    "course"
+  ],
+  "homepage": "https://github.com/hdz-kevin/node#readme",
+  "bugs": {
+    "url": "https://github.com/hdz-kevin/node/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdz-kevin/node.git"
+  },
+  "license": "ISC",
+  "author": "Kevin Hernandez",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
