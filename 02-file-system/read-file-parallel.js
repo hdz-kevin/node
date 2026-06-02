@@ -1,5 +1,4 @@
-
-import { readFile } from "node:fs/promises";
+import { readFile } from 'node:fs/promises'
 
 /**
  * Execute multiple asynchronous operations in parallel
@@ -9,12 +8,11 @@ import { readFile } from "node:fs/promises";
  * have resolved.
  */
 Promise.all([
-    readFile("./file-system/file.txt", "utf-8"),
-    readFile("./file-system/file2.txt", "utf-8"),
+  readFile('./file-system/file.txt', 'utf-8'),
+  readFile('./file-system/file2.txt', 'utf-8')
 ])
-    .then(([text, text2]) => {
-        console.log(text);
-        console.log();
-        console.log(text2);
-    });
-
+  .then(([text, text2]) => {
+    console.log(text)
+    console.log()
+    console.log(text2)
+  })
