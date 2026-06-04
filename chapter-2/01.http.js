@@ -40,6 +40,19 @@ const server = http.createServer((req, res) => {
  */
 
 /**
+ * HTTP response status codes
+ *
+ * Http response status codes indicate whether a specific HTTP request has been
+ * successfully completed. Responses are grouped into five classes
+ *
+ * 100 - 199: Informational response
+ * 200 - 299: Success response
+ * 300 - 399: Redirection response
+ * 400 - 499: Client error response
+ * 500 - 599: Server error response
+ */
+
+/**
  * Listen for incoming requests on a specific port
  */
 
