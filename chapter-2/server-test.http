@@ -1,2 +1,5 @@
 ### GET root /
 GET http://localhost:8000
+
+### GET image file /tatoo.jpg
+GET http://localhost:8000/tatoo.jpg

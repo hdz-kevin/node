@@ -1,4 +1,5 @@
 const http = require('node:http')
+const fs = require('node:fs')
 
 /**
  * Create a http server
@@ -16,6 +17,16 @@ const server = http.createServer((req, res) => {
   } else if (req.url === '/contact') {
     res.statusCode = 200
     res.end('Página de contacto')
+  } else if (req.url === '/tatoo.jpg') {
+    fs.readFile('./tatoo.jpg', (err, data) => {
+      if (err) {
+        res.statusCode = 500
+        return res.end('500 - Internal Server Error')
+      }
+
+      res.setHeader('Content-Type', 'image/jpg')
+      res.end(data)
+    })
   } else {
     res.statusCode = 404
     res.end('404 - Página no encontrada')
